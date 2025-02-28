@@ -25,7 +25,7 @@ public class SearchInsertPosition_35 {
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             System.out.println("Enter array elements with space separation: ");
-            sc.nextLine();  // Consume newline
+            sc.nextLine();
             String[] input = sc.nextLine().split(" ");
             int[] array = new int[input.length];
             for (int j = 0; j < input.length; j++) {
