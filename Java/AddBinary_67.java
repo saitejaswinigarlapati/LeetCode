@@ -1,11 +1,12 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 public class AddBinary_67 {
-        public String addBinary(String a, String b) {
-            int s=Integer.parseInt(a,2);
-            int k=Integer.parseInt(b,2);
-            int add=s+k;
-            return Integer.toBinaryString(add);
-        }
+    public String addBinary(String a, String b) {
+        BigInteger num1 = new BigInteger(a, 2);
+        BigInteger num2 = new BigInteger(b, 2);
+        BigInteger sum = num1.add(num2);
+        return sum.toString(2);
+    }
         public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
             AddBinary_67 obj=new AddBinary_67();
