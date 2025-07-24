@@ -25,3 +25,10 @@ for row in triangle:
 
 
 print(s.minimumTotal(triangle))
+
+
+# Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+# Output: 11
+
+# Input: triangle = [[-10]]
+# Output: -10
