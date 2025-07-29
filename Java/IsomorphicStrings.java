@@ -27,3 +27,12 @@ public class IsomorphicStrings {
         System.out.println("Isomorphic strings : " + obj.isIsomorphic(s, t));
     }
 }
+
+// Input: s = "egg", t = "add"
+// Output: true
+
+// Input: s = "foo", t = "bar"
+// Output: false
+
+// Input: s = "paper", t = "title"
+// Output: true
