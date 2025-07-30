@@ -17,7 +17,7 @@ class SingleNumber_136 {
 
         System.out.println("Enter number of test cases: ");
         int n = sc.nextInt();
-        sc.nextLine(); // Consume newline
+        sc.nextLine();
 
         for (int i = 0; i < n; i++) {
             System.out.println("Enter array elements with space separation: ");
