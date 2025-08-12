@@ -33,3 +33,12 @@ public class SimplifyPath {
     }
 }
 
+// Input: path = "/home/"
+// Output: "/home"
+
+
+// Input: path = "/home//foo/"
+// Output: "/home/foo"
+
+// Input: path = "/home/user/Documents/../Pictures"
+// Output: "/home/user/Pictures"
