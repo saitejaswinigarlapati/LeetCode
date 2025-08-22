@@ -23,3 +23,13 @@ s=Solution()
 string=input('String :')
 pattern=input('Pattern :')
 print(s.isMatch(string,pattern))
+
+
+# Input : s='aa' p='a'
+# Output : False
+
+# Input: s = "aa", p = "a*"
+# Output: true
+
+# Input: s = "ab", p = ".*"
+# Output: true

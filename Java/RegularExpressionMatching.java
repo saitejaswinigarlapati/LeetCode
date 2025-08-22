@@ -45,3 +45,13 @@ public class RegularExpressionMatching {
         System.out.println(sol.isMatch(s, p));
     }
 }
+
+
+// Input : s='aa' p='a'
+// Output : False
+
+// Input: s = "aa", p = "a*"
+// Output: true
+
+// Input: s = "ab", p = ".*"
+// Output: true

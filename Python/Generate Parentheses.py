@@ -1,4 +1,4 @@
-from collections import List
+from typing import List
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         res = []

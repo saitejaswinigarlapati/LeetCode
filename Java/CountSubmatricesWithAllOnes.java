@@ -33,3 +33,10 @@ public class CountSubmatricesWithAllOnes {
         System.out.println("Number of submatrices with all ones: " + result);
     }
 }
+
+
+// Input: mat = [[1,0,1],[1,1,0],[1,1,0]]
+// Output: 13
+
+// Input: mat = [[0,1,1,0],[0,1,1,1],[1,1,1,0]]
+// Output: 24
