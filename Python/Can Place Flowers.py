@@ -20,3 +20,10 @@ s=Solution()
 flowerbed = [1,0,0,0,1]
 n = 1
 print(f"Can plant flowers : {s.canPlaceFlowers(flowerbed,n)}")
+
+
+# Input: flowerbed = [1,0,0,0,1], n = 1
+# Output: true
+
+# Input: flowerbed = [1,0,0,0,1], n = 2
+# Output: false
