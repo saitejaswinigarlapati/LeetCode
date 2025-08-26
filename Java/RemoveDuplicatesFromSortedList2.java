@@ -15,15 +15,12 @@ public class RemoveDuplicatesFromSortedList2 {
         ListNode current = head;
 
         while (current != null) {
-            // Skip all duplicates
             while (current.next != null && current.val == current.next.val) {
                 current = current.next;
             }
-            // If no duplicates, move prev forward
             if (prev.next == current) {
                 prev = prev.next;
             } else {
-                // Skip all duplicate nodes
                 prev.next = current.next;
             }
             current = current.next;
@@ -32,7 +29,6 @@ public class RemoveDuplicatesFromSortedList2 {
     }
 
     public static void main(String[] args) {
-        // Example: Input: 1->2->3->3->4->4->5
         ListNode head = new ListNode(1,
                 new ListNode(2,
                 new ListNode(3,
@@ -41,11 +37,9 @@ public class RemoveDuplicatesFromSortedList2 {
                 new ListNode(4,
                 new ListNode(5)))))));
 
-        // ✅ Use correct class name here
         RemoveDuplicatesFromSortedList2 sol = new RemoveDuplicatesFromSortedList2();
         ListNode result = sol.deleteDuplicates(head);
 
-        // Print output
         while (result != null) {
             System.out.print(result.val);
             if (result.next != null) System.out.print("->");
