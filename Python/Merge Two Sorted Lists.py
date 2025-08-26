@@ -45,3 +45,13 @@ s=Solution()
 list1=list_to_ll([1,2,3])
 list2=list_to_ll([1,3,4])
 print_ll(s.mergeTwoLists(list1,list2))
+
+
+# Input: list1 = [1,2,4], list2 = [1,3,4]
+# Output: [1,1,2,3,4,4]
+
+# Input: list1 = [], list2 = [0]
+# Output: [0]
+
+# Input: list1 = [], list2 = []
+# Output: []

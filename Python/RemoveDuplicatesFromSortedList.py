@@ -39,3 +39,10 @@ head = list_to_linkedlist(input_list)
 solution = Solution()
 updated_head = solution.deleteDuplicates(head)
 print_linkedlist(updated_head)
+
+
+# Input: head = [1,1,2]
+# Output: [1,2]
+
+# Input: head = [1,1,2,3,3]
+# Output: [1,2,3]
