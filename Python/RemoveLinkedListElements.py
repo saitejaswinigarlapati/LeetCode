@@ -37,3 +37,13 @@ val=6
 print_ll(head)
 head=s.removeElements(head,val)
 print_ll(head)
+
+
+# Input: head = [1,2,6,3,4,5,6], val = 6
+# Output: [1,2,3,4,5]
+
+# Input: head = [], val = 1
+# Output: []
+
+# Input: head = [7,7,7,7], val = 7
+# Output: []

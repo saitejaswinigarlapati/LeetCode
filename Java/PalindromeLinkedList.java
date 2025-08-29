@@ -48,3 +48,10 @@ public class PalindromeLinkedList {
         System.out.println("Is Palindrome? " + result);
     }
 }
+
+
+// Input: head = [1,2,2,1]
+// Output: true
+
+// Input: head = [1,2]
+// Output: false
