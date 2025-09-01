@@ -12,3 +12,9 @@ class Solution:
 s=Solution()
 n=2
 print("Distinct ways : ",s.climbStairs(n))
+
+# Input: n = 2
+# Output: 2
+
+# Input: n = 3
+# Output: 3
