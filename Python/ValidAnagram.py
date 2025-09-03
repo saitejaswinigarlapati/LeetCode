@@ -10,3 +10,10 @@ s = "anagram"
 t = "nagaram"
 
 print("Anagrams : ",obj.isAnagram(s,t))
+
+# Input: s = "anagram", t = "nagaram"
+# Output: true
+
+# Input: s = "rat", t = "car"
+# Output: false
+
