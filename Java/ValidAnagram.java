@@ -13,8 +13,8 @@ public class ValidAnagram {
     }
     public static void main(String[] args) {
         ValidAnagram obj=new ValidAnagram();
-        String s="anagram";
-        String t = "nagaram";
+        String s="rat";
+        String t = "car";
         System.out.println("Anagrams : "+obj.isAnagram(s, t));
 
     }

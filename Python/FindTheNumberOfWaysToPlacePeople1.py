@@ -15,7 +15,7 @@ class Solution:
         return cnt
     
 s=Solution()
-points = [[1,1],[2,2],[3,3]]
+points = [[6,2],[4,4],[2,6]]
 print(s.numberOfPairs(points))
 
 
