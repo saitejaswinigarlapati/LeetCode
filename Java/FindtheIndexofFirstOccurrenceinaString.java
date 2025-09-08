@@ -30,3 +30,10 @@ public class FindtheIndexofFirstOccurrenceinaString {
 
     }
 }
+
+
+// Input: haystack = "sadbutsad", needle = "sad"
+// Output: 0
+
+// Input: haystack = "leetcode", needle = "leeto"
+// Output: -1

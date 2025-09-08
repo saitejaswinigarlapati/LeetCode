@@ -50,5 +50,13 @@ print('Before rotation :')
 print_ll(ls)
 print('\nk :',k)
 ans=rotateRight(ls,k)
-print('After rotation')
+print('\nAfter rotation')
 print_ll(ans)
+
+
+# Input: head = [1,2,3,4,5], k = 2
+# Output: [4,5,1,2,3]
+
+# Input: head = [0,1,2], k = 4
+# Output: [2,0,1]
+ 

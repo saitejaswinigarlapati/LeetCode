@@ -10,3 +10,9 @@ haystack=input("Enter haystack : ")
 needle=input("Enter needle : ")
 print(s.strStr(haystack,needle))
         
+        
+# Input: haystack = "sadbutsad", needle = "sad"
+# Output: 0
+
+# Input: haystack = "leetcode", needle = "leeto"
+# Output: -1
