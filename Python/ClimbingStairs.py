@@ -10,7 +10,7 @@ class Solution:
     
 
 s=Solution()
-n=2
+n=3
 print("Distinct ways : ",s.climbStairs(n))
 
 # Input: n = 2
