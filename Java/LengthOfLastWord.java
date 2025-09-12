@@ -10,3 +10,13 @@ public class LengthOfLastWord {
         System.out.println("Length of last word: " + lengthOfLastWord(s));
     }
 }
+
+
+// Input: s = "Hello World"
+// Output: 5
+
+// Input: s = "   fly me   to   the moon  "
+// Output: 4
+
+// Input: s = "luffy is still joyboy"
+// Output: 6
