@@ -9,7 +9,14 @@ class Solution:
             maxCV[idx]=max(maxCV[idx], f)
         return maxCV[0]+maxCV[1]
         
+
 s=Solution()
 
-a="success"
-print("Sum of the two frequencies",s.maxFreqSum(a)) 
+string="Success"
+print(s.maxFreqSum(string))
+
+# Input: s = "successes"
+# Output: 6
+
+# Input: s = "aeiaeia"
+# Output: 3
