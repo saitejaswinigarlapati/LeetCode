@@ -30,7 +30,6 @@ class Solution {
 }
 
 public class ConvertSortedArrayToBinarySearchTree {
-    // Helper to serialize BST like LeetCode
     public static List<Integer> serialize(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
@@ -49,7 +48,6 @@ public class ConvertSortedArrayToBinarySearchTree {
             }
         }
 
-        // Remove trailing nulls
         int i = result.size() - 1;
         while (i >= 0 && result.get(i) == null) {
             result.remove(i);
