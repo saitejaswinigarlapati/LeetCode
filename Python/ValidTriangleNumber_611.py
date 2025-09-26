@@ -1,5 +1,5 @@
 class Solution:
-    def triangleNumber(self, nums: List[int]) -> int:
+    def triangleNumber(self, nums: list[int]) -> int:
         nums.sort()
         n=len(nums)
         count=0
@@ -17,3 +17,10 @@ s=Solution()
 
 nums=[2,2,3,4]
 print("Number of Valid combinations are: ",s.triangleNumber(nums))
+
+
+# Input: nums = [2,2,3,4]
+# Output: 3
+
+# Input: nums = [4,2,3,4]
+# Output: 4
