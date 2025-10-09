@@ -11,7 +11,7 @@ class Solution:
     
 s=Solution()
 
-nums = [2,7,11,15]
+nums = [3,2,4]
 target = 9
 
 print(s.twoSum(nums,target))

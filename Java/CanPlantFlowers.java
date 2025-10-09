@@ -19,7 +19,7 @@ public class CanPlantFlowers {
     public static void main(String[] args) {
         CanPlantFlowers obj=new CanPlantFlowers();
         int[] flowerbed ={1,0,0,0,1};
-        int n=1;
+        int n=2;
         System.out.print("Can plant flowers : " + obj.canPlantFlowers(flowerbed, n));
     }
 }
