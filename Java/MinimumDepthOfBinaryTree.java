@@ -8,7 +8,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class MinimumDepthOfBinaryTree {
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -38,7 +38,14 @@ class Solution {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        Solution sol = new Solution();
+        MinimumDepthOfBinaryTree sol = new MinimumDepthOfBinaryTree();
         System.out.println(sol.minDepth(root)); // Output should be 2
     }
 }
+
+
+// Input: root = [3,9,20,null,null,15,7]
+// Output: 2
+
+// Input: root = [2,null,3,null,4,null,5,null,6]
+// Output: 5
