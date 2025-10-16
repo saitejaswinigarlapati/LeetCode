@@ -21,6 +21,6 @@ head=ListNode(1)
 head.next=ListNode(0)
 head.next.next=ListNode(1)
 
-print(s.getDecimalValue(head))
+print("Binary value of the given linked list: ",s.getDecimalValue(head))
 
 
