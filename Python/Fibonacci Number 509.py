@@ -12,3 +12,10 @@ s=Solution()
 
 n=2
 print(s.fib(n))
+
+
+# Input: n = 3
+# Output: 2
+
+# Input: n = 4
+# Output: 3
