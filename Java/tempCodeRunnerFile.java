@@ -1,20 +1,47 @@
-public class RemoveDuplicatesFromSortedArray2_80 {
-    public int removeDuplicates(int[] nums){
-        int k=2;
-        for(int i=2;i<nums.length;i++){
-            if(nums[i] != nums[k-2]){
-                nums[k]=nums[i];
-                k++;
+import java.util.*;
+
+public class IntersectionOfTwoArrays2_305  {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        // Ensure nums1 is the smaller array for efficiency
+        if (nums1.length > nums2.length)
+            return intersect(nums2, nums1);
+
+        Map<Integer, Integer> count = new HashMap<>();
+        List<Integer> result = new ArrayList<>();
+
+        // Count occurrences of elements in nums1
+        for (int num : nums1) {
+            count.put(num, count.getOrDefault(num, 0) + 1);
+        }
+
+        // Find intersection
+        for (int num : nums2) {
+            if (count.getOrDefault(num, 0) > 0) {
+                result.add(num);
+                count.put(num, count.get(num) - 1);
             }
         }
-        return k;
+
+        // Convert List<Integer> to int[]
+        int[] ans = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            ans[i] = result.get(i);
+        }
+
+        return ans;
     }
 
     public static void main(String[] args) {
+        IntersectionOfTwoArrays2_305 s = new IntersectionOfTwoArrays2_305();
 
-        RemoveDuplicatesFromSortedArray2_80 obj =new RemoveDuplicatesFromSortedArray2_80();
+        int[] nums1 = {1, 2, 2, 1};
+        int[] nums2 = {2, 2};
 
-        int[] nums={1,1,1,2,2,3};
-        System.out.println("k: "+obj.removeDuplicates(nums));
+        System.out.println(Arrays.toString(s.intersect(nums1, nums2)));
+
+        int[] nums3 = {4, 9, 5};
+        int[] nums4 = {9, 4, 9, 8, 4};
+
+        System.out.println(Arrays.toString(s.intersect(nums3, nums4)));
     }
 }
