@@ -1,47 +1,80 @@
-import java.util.*;
+public class LinkedListCycle2 {
 
-public class IntersectionOfTwoArrays2_305  {
-    public int[] intersect(int[] nums1, int[] nums2) {
-        // Ensure nums1 is the smaller array for efficiency
-        if (nums1.length > nums2.length)
-            return intersect(nums2, nums1);
-
-        Map<Integer, Integer> count = new HashMap<>();
-        List<Integer> result = new ArrayList<>();
-
-        // Count occurrences of elements in nums1
-        for (int num : nums1) {
-            count.put(num, count.getOrDefault(num, 0) + 1);
+    // Definition for singly-linked list.
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
         }
+    }
 
-        // Find intersection
-        for (int num : nums2) {
-            if (count.getOrDefault(num, 0) > 0) {
-                result.add(num);
-                count.put(num, count.get(num) - 1);
+    public ListNode detectCycle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        // Detect if there is a cycle
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) { // cycle detected
+                break;
             }
         }
 
-        // Convert List<Integer> to int[]
-        int[] ans = new int[result.size()];
-        for (int i = 0; i < result.size(); i++) {
-            ans[i] = result.get(i);
+        // If no cycle
+        if (fast == null || fast.next == null) {
+            return null;
         }
 
-        return ans;
+        // Find start of the cycle
+        fast = head;
+        while (fast != slow) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        return slow; // start node of the cycle
     }
 
+    // Helper function to create a linked list with a cycle
+    public static ListNode listToLL(int[] arr, int pos) {
+        if (arr.length == 0) return null;
+
+        ListNode head = new ListNode(arr[0]);
+        ListNode curr = head;
+        ListNode[] nodes = new ListNode[arr.length];
+        nodes[0] = head;
+
+        for (int i = 1; i < arr.length; i++) {
+            curr.next = new ListNode(arr[i]);
+            curr = curr.next;
+            nodes[i] = curr;
+        }
+
+        // If pos >= 0, create a cycle
+        if (pos != -1) {
+            curr.next = nodes[pos];
+        }
+
+        return head;
+    }
+
+    // Example usage
     public static void main(String[] args) {
-        IntersectionOfTwoArrays2_305 s = new IntersectionOfTwoArrays2_305();
+        LinkedListCycle2 s = new LinkedListCycle2();
+        int[] l = {3, 2, 0, -4};
+        int pos = 1; // position where tail connects (index 1 -> value 2)
 
-        int[] nums1 = {1, 2, 2, 1};
-        int[] nums2 = {2, 2};
+        ListNode head = listToLL(l, pos);
+        ListNode cycleNode = s.detectCycle(head);
 
-        System.out.println(Arrays.toString(s.intersect(nums1, nums2)));
-
-        int[] nums3 = {4, 9, 5};
-        int[] nums4 = {9, 4, 9, 8, 4};
-
-        System.out.println(Arrays.toString(s.intersect(nums3, nums4)));
+        if (cycleNode != null) {
+            System.out.println("Cycle detected at node with value: " + cycleNode.val);
+        } else {
+            System.out.println("No cycle detected");
+        }
     }
 }
