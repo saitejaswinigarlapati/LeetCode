@@ -37,7 +37,7 @@ public class EditDistance_72 {
         String word1_1 = "horse";
         String word2_1 = "ros";
         int dist1 = sol.minDistance(word1_1, word2_1);
-        System.out.println("The minimum edit distance between \"" + word1_1 + "\" and \"" + word2_1 + "\" is: " + dist1); // Expected: 3
+        System.out.println("The minimum edit distance between \"" + word1_1 + "\" and \"" + word2_1 + "\" is: " + dist1);
 
     
     }
