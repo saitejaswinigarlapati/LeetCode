@@ -16,6 +16,6 @@ public class ComplementOfBase10Integer {
         ComplementOfBase10Integer obj= new ComplementOfBase10Integer();
 
         int n=5;
-        System.out.printf(n+"'s Complement: ",obj.bitwiseComplement(n));
+        System.out.printf(n+"'s Complement: "+obj.bitwiseComplement(n));
     }
 }
