@@ -27,7 +27,11 @@ n4=ListNode(-4)
 n1.next=n2
 n2.next=n3
 n3.next=n4
-n4.next=n2
+n4.next=None
 res=s.detectCycle(n1)
-print(res.val)
+
+if res==None:
+    print("no cycle")
+else:   
+    print("tail connects to node index",res.val)
         
