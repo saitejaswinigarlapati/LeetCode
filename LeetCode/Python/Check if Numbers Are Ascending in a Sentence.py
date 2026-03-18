@@ -20,3 +20,4 @@ print(obj.areNumbersAscending(s))
 
 # Input: s = "hello world 5 x 5"
 # Output: false
+
